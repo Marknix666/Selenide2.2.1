@@ -19,8 +19,8 @@ public class CardDeliveryTest {
     @Test
     public void testAnketaCard(){
         open("http://localhost:9999/");
-        $("[data-test-id='citi'] input").setValue("Уфа");
-        String curentDate = generateDate(24,"MM");
+        $("[data-test-id='city'] input").setValue("Уфа");
+        String curentDate = generateDate(3,"dd.MM.yyyy");
         $("[data-test-id= 'date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").sendKeys(curentDate);
         $("[data-test-id='name'] input").setValue("Романов Роман");
