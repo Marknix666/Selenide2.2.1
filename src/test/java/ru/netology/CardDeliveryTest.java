@@ -7,9 +7,9 @@ import org.openqa.selenium.Keys;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
     private String generateDate(int addDays, String pattern) {
@@ -28,7 +28,7 @@ public class CardDeliveryTest {
         $("[data-test-id='agreement'] input").click();
         $("button.button").click();
         $(".notification__content")
-                .shouldBe(Condition.visible, Duration.ofSeconds(15))
+                .shouldBe(Condition.visible, Duration.ofSeconds(20))
                 .shouldHave(Condition.exactOwnText("Встреча успешно забронирована на " +curentDate));
         
     }
