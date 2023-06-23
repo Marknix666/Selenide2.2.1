@@ -10,9 +10,9 @@ build: off
 
 install:
   - java -jar ./artifacts/app-card-delivery.jar &
+  -  -Dselenide.headless=true
 
 
 build_script:
   - chmod +x gradlew
-  - -Dselenide.headless=true
   - ./gradlew test --info
