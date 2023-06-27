@@ -25,7 +25,7 @@ public class CardDeliveryTest {
         $("[data-test-id='date'] input").sendKeys(curentDate);
         $("[data-test-id='name'] input").setValue("Романов Роман Романович");
         $("[data-test-id='phone'] input").setValue("+79313313131");
-        $("[data-test-id='agreement'] input").click();
+        $("[data-test-id='agreement']").click();
         $("button.button").click();
         $(".notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
